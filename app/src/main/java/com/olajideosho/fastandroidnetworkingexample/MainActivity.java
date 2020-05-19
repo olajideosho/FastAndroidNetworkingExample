@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendRequest(){
-        //Dynamic JSON Object Request
+
+        //Dynamic Java Object Request
         AndroidNetworking.get("https://reqres.in/api/users?page=2")
                 .build()
                 .getAsObject(UserListResponse.class, new ParsedRequestListener<UserListResponse>() {
@@ -48,7 +49,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        //Delete Request
+//        AndroidNetworking.delete(url)
 
+        //Update Request
+//        AndroidNetworking.put(url)
+//        AndroidNetworking.patch(url)
 
         //Custom Object Request
 //        UserObject user = new UserObject();
